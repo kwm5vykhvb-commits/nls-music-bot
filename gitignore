@@ -1,0 +1,6 @@
+.env
+*.session
+*.session-journal
+telegram_tracks.json
+__pycache__/
+*.log

@@ -1,6 +1,5 @@
-import asyncio
 import logging
-from pyrogram import Client, filters
+from pyrogram import Client, filters, idle
 
 API_ID = 38875417
 API_HASH = "f079b800a9b2f0009e474bd3bb8300e9"
@@ -21,14 +20,10 @@ async def start_handler(client, message):
     await message.reply_text("✅ Bot NLS Music en ligne !")
 
 async def main():
-    logger.info("Bot starting...")
     await app.start()
     logger.info("Bot started")
     await idle()
-
-async def idle():
-    stop = asyncio.Event()
-    await stop.wait()
+    await app.stop()
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    app.run(main())

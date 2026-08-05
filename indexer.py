@@ -5,7 +5,6 @@ from pyrogram import Client
 
 API_ID = 38875417
 API_HASH = "f079b800a9b2f0009e474bd3bb8300e9"
-BOT_TOKEN = "8800268651:AAGKQ7YSHjUeuf_ox-D12fVYDR2GVgrO_GU"
 CHANNEL = "@NLS_music"
 
 logging.basicConfig(level=logging.INFO)
@@ -14,8 +13,7 @@ logger = logging.getLogger(__name__)
 app = Client(
     "nls_music_indexer",
     api_id=API_ID,
-    api_hash=API_HASH,
-    bot_token=BOT_TOKEN
+    api_hash=API_HASH
 )
 
 async def index_channel():
